@@ -1,0 +1,28 @@
+<svg width="220" height="240" viewBox="0 0 220 240" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="fur" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9b6b43"/>
+      <stop offset="100%" stop-color="#7a4e2e"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Body -->
+  <ellipse cx="110" cy="140" rx="70" ry="80" fill="url(#fur)"/>
+
+  <!-- Head -->
+  <circle cx="110" cy="70" r="55" fill="url(#fur)"/>
+
+  <!-- Ears -->
+  <circle cx="55" cy="30" r="25" fill="#7a4e2e"/>
+  <circle cx="165" cy="30" r="25" fill="#7a4e2e"/>
+
+  <!-- Eyes -->
+  <circle cx="90" cy="65" r="6" fill="#222"/>
+  <circle cx="130" cy="65" r="6" fill="#222"/>
+
+  <!-- Nose -->
+  <ellipse cx="110" cy="85" rx="8" ry="6" fill="#222"/>
+
+  <!-- Smile -->
+  <path d="M95 95 Q110 105 125 95" stroke="#222" stroke-width="3" fill="none"/>
+</svg>

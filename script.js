@@ -36,7 +36,9 @@ document.querySelectorAll(".choices button").forEach(btn => {
       : currentStyle === "water" ? "Water Breathing"
       : "Blossom Breathing";
 
+    setMode(currentStyle);
     aura.className = currentStyle;
+
   });
 });
 

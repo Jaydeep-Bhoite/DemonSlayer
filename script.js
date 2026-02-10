@@ -21,8 +21,9 @@ function setMode(mode) {
 
   if (mode === "fire") aura.style.background = "#ff4500";
   if (mode === "water") aura.style.background = "#3fbac2";
-  if (mode === "air") aura.style.background = "#ffffff";
+  if (mode === "blossom") aura.style.background = "#ff7aa2";
 }
+
 
 
 document.querySelectorAll(".choices button").forEach(btn => {

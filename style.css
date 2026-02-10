@@ -73,12 +73,10 @@ button:hover {
   z-index: 0;
 }
 
-#teddy {
-  font-size: 120px;
-  margin: 40px 0;
+#teddy img {
+  width: 200px;
+  height: auto;
   transition: transform 0.2s ease;
-  position: relative;
-  z-index: 1;
 }
 
 .flame {

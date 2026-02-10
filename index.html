@@ -3,47 +3,77 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Breathing of the Hug</title>
+  <title>Breathing of the Hug 💛</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
+  <div class="particles-container" id="particles"></div>
+  
   <div id="app">
-
-    <!-- Intro -->
+    <!-- Intro Screen -->
     <section id="intro" class="screen active">
-      <h1>Breathing of the Hug</h1>
-      <p>Choose your breathing style</p>
-
-      <div class="choices">
-        <button data-style="fire">🔥 Flame</button>
-        <button data-style="water">💧 Water</button>
-        <button data-style="blossom">🌸 Blossom</button>
-
+      <div class="intro-content">
+        <h1 class="title-main">
+          <span class="kanji">抱擁の呼吸</span>
+          <span class="title-sub">Breathing of the Hug</span>
+        </h1>
+        <p class="subtitle">Choose your breathing style to send your love</p>
+        <div class="choices">
+          <button data-style="fire" class="style-btn fire-btn">
+            <span class="btn-icon">🔥</span>
+            <span class="btn-label">Flame Breathing</span>
+            <span class="btn-desc">Passionate & Fierce</span>
+          </button>
+          <button data-style="water" class="style-btn water-btn">
+            <span class="btn-icon">💧</span>
+            <span class="btn-label">Water Breathing</span>
+            <span class="btn-desc">Calm & Flowing</span>
+          </button>
+          <button data-style="blossom" class="style-btn blossom-btn">
+            <span class="btn-icon">🌸</span>
+            <span class="btn-label">Flower Breathing</span>
+            <span class="btn-desc">Gentle & Beautiful</span>
+          </button>
+        </div>
       </div>
     </section>
 
     <!-- Hug Screen -->
     <section id="hug" class="screen">
-      <h2 id="styleTitle"></h2>
-
-      <div id="aura"></div>
-
-      <div id="teddy">
-        <img src="bear.svg" alt="Teddy Bear" />
+      <div class="hug-content">
+        <h2 id="styleTitle" class="breathing-title"></h2>
+        <p class="technique-name" id="techniqueName"></p>
+        
+        <div class="bear-container">
+          <div id="aura" class="aura"></div>
+          <div class="breathing-rings"></div>
+          <div id="teddy" class="teddy">
+            <img src="bear.svg" alt="Teddy Bear" />
+          </div>
+        </div>
+        
+        <div class="instruction">
+          <p class="hint">Press & hold the bear to channel your hug</p>
+          <div class="hold-indicator">
+            <div class="hold-progress"></div>
+          </div>
+        </div>
       </div>
-
-
-      <p id="hint">Press & hold to send a hug</p>
     </section>
 
-    <!-- Message -->
+    <!-- Message Screen -->
     <section id="message" class="screen">
-      <h2>Hug Sent 💛</h2>
-      <p id="finalMessage"></p>
-      <button onclick="location.reload()">Send another</button>
+      <div class="message-content">
+        <div class="success-icon">💛</div>
+        <h2 class="success-title">Hug Delivered!</h2>
+        <p id="finalMessage" class="final-message"></p>
+        <div class="message-decoration"></div>
+        <button class="restart-btn" onclick="location.reload()">
+          <span>Send Another Hug</span>
+          <span class="btn-arrow">→</span>
+        </button>
+      </div>
     </section>
-
   </div>
 
   <script src="script.js"></script>

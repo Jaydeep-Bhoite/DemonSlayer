@@ -31,10 +31,12 @@ document.querySelectorAll(".choices button").forEach(btn => {
     intro.classList.remove("active");
     hug.classList.add("active");
 
-    styleTitle.textContent =
-      currentStyle === "flame" ? "Flame Breathing"
-      : currentStyle === "water" ? "Water Breathing"
-      : "Blossom Breathing";
+ styleTitle.textContent =
+  currentStyle === "fire" ? "Flame Breathing"
+  : currentStyle === "water" ? "Water Breathing"
+  : "Blossom Breathing";
+
+
 
     setMode(currentStyle);
     aura.className = currentStyle;

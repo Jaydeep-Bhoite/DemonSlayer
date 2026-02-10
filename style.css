@@ -67,6 +67,12 @@ body.air {
 }
 
 
+body.blossom {
+  background:
+    radial-gradient(circle at center, #ffb7d5 0%, #ff7aa2 50%, #4a0d2a 100%);
+}
+
+
 #app {
   height: 100%;
 }

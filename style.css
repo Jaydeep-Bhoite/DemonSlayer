@@ -35,6 +35,18 @@ body.fire {
   animation: firePulse 3s infinite ease-in-out;
 }
 
+.fire {
+  background: radial-gradient(circle, orange, red);
+}
+
+.water {
+  background: radial-gradient(circle, #4fc3f7, #01579b);
+}
+
+.blossom {
+  background: radial-gradient(circle, pink, hotpink);
+}
+
 body.water {
   background:
     radial-gradient(circle at top, #7fd9ff 0%, #0b4f6c 60%, #021c29 100%),
@@ -129,17 +141,8 @@ button:hover {
   height: auto;
   transition: transform 0.2s ease;
 }
-
-.flame {
-  background: radial-gradient(circle, orange, red);
-}
-
 .water {
   background: radial-gradient(circle, #4fc3f7, #01579b);
-}
-
-.flower {
-  background: radial-gradient(circle, pink, hotpink);
 }
 
 #hint {

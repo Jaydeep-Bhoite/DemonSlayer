@@ -152,6 +152,11 @@ teddy.addEventListener("pointerup", endHold);
 teddy.addEventListener("pointerleave", endHold);
 teddy.addEventListener("pointercancel", endHold);
 
+// Prevent context menu on teddy and image
+teddy.addEventListener("contextmenu", (e) => e.preventDefault());
+document.querySelector(".teddy img").addEventListener("contextmenu", (e) => e.preventDefault());
+document.querySelector(".teddy img").addEventListener("dragstart", (e) => e.preventDefault());
+
 function startHold(e) {
   e.preventDefault();
   holding = true;

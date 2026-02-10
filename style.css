@@ -15,6 +15,25 @@ body {
   touch-action: manipulation;
   position: relative;
   transition: background 0.6s ease;
+  /* Default intro background - dark with subtle gradient */
+  background: 
+    radial-gradient(ellipse at 20% 20%, rgba(138, 43, 226, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 80%, rgba(255, 20, 147, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 50%, rgba(30, 144, 255, 0.1) 0%, transparent 60%),
+    linear-gradient(135deg, #0a0a1a 0%, #1a0a2e 25%, #2a1a3e 50%, #1a0a2e 75%, #0a0a1a 100%);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 400% 400%;
+  animation: introBreathing 12s ease-in-out infinite;
+}
+
+@keyframes introBreathing {
+  0%, 100% { 
+    background-position: 0% 0%, 0% 0%, 0% 0%, 0% 50%;
+    filter: brightness(1) saturate(1.2);
+  }
+  50% { 
+    background-position: 0% 0%, 0% 0%, 0% 0%, 100% 50%;
+    filter: brightness(1.1) saturate(1.4);
+  }
 }
 
 /* ========== BREATHING STYLE BACKGROUNDS ========== */
@@ -130,6 +149,10 @@ body.blossom {
   filter: drop-shadow(0 0 8px #ffb7d5);
 }
 
+.particle.ambient-particle {
+  opacity: 0.5;
+}
+
 /* ========== APP CONTAINER ========== */
 
 #app {
@@ -187,8 +210,30 @@ body.blossom {
   font-weight: 300;
   color: rgba(255, 255, 255, 0.95);
   letter-spacing: 4px;
-  text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  text-shadow: 
+    0 0 10px rgba(138, 43, 226, 0.8),
+    0 0 20px rgba(138, 43, 226, 0.6),
+    0 0 30px rgba(138, 43, 226, 0.4),
+    0 0 40px rgba(255, 20, 147, 0.3);
   margin-bottom: 8px;
+  animation: kanjiGlow 3s ease-in-out infinite;
+}
+
+@keyframes kanjiGlow {
+  0%, 100% {
+    text-shadow: 
+      0 0 10px rgba(138, 43, 226, 0.8),
+      0 0 20px rgba(138, 43, 226, 0.6),
+      0 0 30px rgba(138, 43, 226, 0.4),
+      0 0 40px rgba(255, 20, 147, 0.3);
+  }
+  50% {
+    text-shadow: 
+      0 0 15px rgba(138, 43, 226, 1),
+      0 0 25px rgba(138, 43, 226, 0.8),
+      0 0 35px rgba(138, 43, 226, 0.6),
+      0 0 50px rgba(255, 20, 147, 0.5);
+  }
 }
 
 .title-sub {
@@ -249,7 +294,10 @@ body.blossom {
   transform: translateY(-4px);
   border-color: rgba(255, 255, 255, 0.6);
   background: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  box-shadow: 
+    0 8px 25px rgba(0, 0, 0, 0.3),
+    0 0 20px rgba(138, 43, 226, 0.3),
+    inset 0 0 20px rgba(255, 255, 255, 0.1);
 }
 
 .style-btn:active {
@@ -272,6 +320,28 @@ body.blossom {
   font-size: 0.85rem;
   color: rgba(255, 255, 255, 0.7);
   font-weight: 300;
+}
+
+/* Individual button glow effects */
+.fire-btn:hover {
+  box-shadow: 
+    0 8px 25px rgba(0, 0, 0, 0.3),
+    0 0 30px rgba(255, 69, 0, 0.4),
+    inset 0 0 20px rgba(255, 122, 24, 0.2);
+}
+
+.water-btn:hover {
+  box-shadow: 
+    0 8px 25px rgba(0, 0, 0, 0.3),
+    0 0 30px rgba(63, 186, 194, 0.4),
+    inset 0 0 20px rgba(79, 195, 247, 0.2);
+}
+
+.blossom-btn:hover {
+  box-shadow: 
+    0 8px 25px rgba(0, 0, 0, 0.3),
+    0 0 30px rgba(255, 122, 162, 0.4),
+    inset 0 0 20px rgba(255, 183, 213, 0.2);
 }
 
 /* ========== HUG SCREEN ========== */

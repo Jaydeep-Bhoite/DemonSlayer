@@ -19,6 +19,54 @@ let holdStartTime = 0;
 let holdAnimationFrame = null;
 const HOLD_DURATION = 1500; // 1.5 seconds to complete hug
 
+// Start ambient particles on load
+window.addEventListener("DOMContentLoaded", () => {
+  startAmbientParticles();
+});
+
+// Ambient particles for intro screen
+let ambientParticleInterval = null;
+
+function startAmbientParticles() {
+  // Create initial particles
+  for (let i = 0; i < 15; i++) {
+    setTimeout(() => createAmbientParticle(), i * 200);
+  }
+  
+  // Continue creating particles
+  ambientParticleInterval = setInterval(() => {
+    if (intro.classList.contains("active")) {
+      createAmbientParticle();
+    } else {
+      clearInterval(ambientParticleInterval);
+    }
+  }, 1000);
+}
+
+function createAmbientParticle() {
+  const particle = document.createElement("div");
+  particle.className = "particle ambient-particle";
+  
+  const emojis = ['✨', '⭐', '💫', '🌟'];
+  const randomEmoji = emojis[Math.floor(Math.random() * emojis.length)];
+  particle.textContent = randomEmoji;
+  particle.style.fontSize = `${Math.random() * 15 + 15}px`;
+  particle.style.left = `${Math.random() * window.innerWidth}px`;
+  particle.style.top = `${window.innerHeight}px`;
+  particle.style.animationDuration = `${Math.random() * 3 + 4}s`;
+  
+  // Gradient colors for ambient particles
+  const colors = ['rgba(138, 43, 226, 0.6)', 'rgba(255, 20, 147, 0.6)', 'rgba(30, 144, 255, 0.6)'];
+  particle.style.color = colors[Math.floor(Math.random() * colors.length)];
+  particle.style.filter = `drop-shadow(0 0 8px ${colors[Math.floor(Math.random() * colors.length)]})`;
+  
+  particlesContainer.appendChild(particle);
+  
+  setTimeout(() => {
+    particle.remove();
+  }, 7000);
+}
+
 // Messages for each breathing style
 const messages = {
   fire: "Like an eternal flame, my love for you burns bright and unwavering. I'd cross any battlefield just to hold you. 🔥",

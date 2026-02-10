@@ -6,11 +6,77 @@
 }
 
 body {
-  background: radial-gradient(circle at top, #111, #000);
-  color: white;
-  height: 100vh;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   overflow: hidden;
+  touch-action: manipulation;
 }
+
+h1, p {
+  color: rgba(255,255,255,0.85);
+}
+
+body.fire {
+  background:
+    radial-gradient(circle at center, #ff7a18 0%, #ff4500 40%, #120000 75%),
+    linear-gradient(180deg, #ffae00, #ff4500);
+}
+
+@keyframes firePulse {
+  0%, 100% { filter: brightness(1); }
+  50% { filter: brightness(1.1); }
+}
+
+body.fire {
+  animation: firePulse 3s infinite ease-in-out;
+}
+
+body.water {
+  background:
+    radial-gradient(circle at top, #7fd9ff 0%, #0b4f6c 60%, #021c29 100%),
+    linear-gradient(180deg, #3fbac2, #0b4f6c);
+}
+@keyframes waterFlow {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 0% 100%; }
+}
+
+body.water {
+  background-size: 100% 200%;
+  animation: waterFlow 8s linear infinite;
+}
+
+body.air {
+  background:
+    radial-gradient(circle at center, #ffffff 0%, #cfe9f3 50%, #7fbcd2 100%),
+    linear-gradient(120deg, #eaf6fb, #b3dbe8);
+}
+
+@keyframes windDrift {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 100% 0%; }
+}
+
+body.air {
+  background-size: 200% 100%;
+  animation: windDrift 12s linear infinite;
+}
+
+#aura {
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  filter: blur(40px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
 
 #app {
   height: 100%;
@@ -30,17 +96,8 @@ body {
   align-items: center;
 }
 
-h1 {
-  font-size: 2.4rem;
-  margin-bottom: 10px;
-}
-
 h2 {
   margin-bottom: 20px;
-}
-
-p {
-  opacity: 0.8;
 }
 
 .choices {
@@ -63,14 +120,13 @@ button:hover {
 
 #aura {
   position: absolute;
-  width: 260px;
-  height: 260px;
+  width: 280px;
+  height: 280px;
   border-radius: 50%;
-  filter: blur(30px);
+  filter: blur(40px);
   opacity: 0;
-  transition: opacity 0.2s ease, transform 0.2s ease;
   pointer-events: none;
-  z-index: 0;
+  transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
 #teddy img {

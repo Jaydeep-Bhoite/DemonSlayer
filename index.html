@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Breathing of the Hug</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div id="app">
+
+    <!-- Intro -->
+    <section id="intro" class="screen active">
+      <h1>Breathing of the Hug</h1>
+      <p>Choose your breathing style</p>
+
+      <div class="choices">
+        <button data-style="flame">🔥 Flame</button>
+        <button data-style="water">💧 Water</button>
+        <button data-style="flower">🌸 Blossom</button>
+      </div>
+    </section>
+
+    <!-- Hug Screen -->
+    <section id="hug" class="screen">
+      <h2 id="styleTitle"></h2>
+
+      <div id="aura"></div>
+
+      <div id="teddy">
+        🧸
+      </div>
+
+      <p id="hint">Press & hold to send a hug</p>
+    </section>
+
+    <!-- Message -->
+    <section id="message" class="screen">
+      <h2>Hug Sent 💛</h2>
+      <p id="finalMessage"></p>
+      <button onclick="location.reload()">Send another</button>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

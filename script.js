@@ -11,9 +11,9 @@ let currentStyle = "";
 let holding = false;
 
 const messages = {
-  flame: "I’d cross any battlefield just to hold you.",
+  fire: "I’d cross any battlefield just to hold you.",
   water: "Even from afar, I flow back to you.",
-  flower: "Soft, warm, and always yours."
+  blossom: "Soft, warm, and always yours."
 };
 
 function setMode(mode) {

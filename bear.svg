@@ -1,28 +1,72 @@
-<svg width="220" height="240" viewBox="0 0 220 240" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="fur" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9b6b43"/>
-      <stop offset="100%" stop-color="#7a4e2e"/>
-    </linearGradient>
-  </defs>
-
-  <!-- Body -->
-  <ellipse cx="110" cy="140" rx="70" ry="80" fill="url(#fur)"/>
-
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Shadow -->
+  <ellipse cx="100" cy="185" rx="50" ry="8" fill="rgba(0,0,0,0.15)"/>
+  
+  <!-- Left Ear -->
+  <circle cx="65" cy="45" r="25" fill="#8B6F47"/>
+  <circle cx="65" cy="48" r="15" fill="#D4A574"/>
+  
+  <!-- Right Ear -->
+  <circle cx="135" cy="45" r="25" fill="#8B6F47"/>
+  <circle cx="135" cy="48" r="15" fill="#D4A574"/>
+  
   <!-- Head -->
-  <circle cx="110" cy="70" r="55" fill="url(#fur)"/>
-
-  <!-- Ears -->
-  <circle cx="55" cy="30" r="25" fill="#7a4e2e"/>
-  <circle cx="165" cy="30" r="25" fill="#7a4e2e"/>
-
-  <!-- Eyes -->
-  <circle cx="90" cy="65" r="6" fill="#222"/>
-  <circle cx="130" cy="65" r="6" fill="#222"/>
-
+  <circle cx="100" cy="75" r="45" fill="#A0826D"/>
+  
+  <!-- Face fur detail -->
+  <circle cx="100" cy="85" r="30" fill="#D4A574"/>
+  
+  <!-- Left Eye -->
+  <ellipse cx="85" cy="70" rx="8" ry="12" fill="#2C1810"/>
+  <ellipse cx="87" cy="67" rx="3" ry="4" fill="#FFFFFF"/>
+  <circle cx="86" cy="72" r="1.5" fill="#FFFFFF" opacity="0.6"/>
+  
+  <!-- Right Eye -->
+  <ellipse cx="115" cy="70" rx="8" ry="12" fill="#2C1810"/>
+  <ellipse cx="117" cy="67" rx="3" ry="4" fill="#FFFFFF"/>
+  <circle cx="116" cy="72" r="1.5" fill="#FFFFFF" opacity="0.6"/>
+  
   <!-- Nose -->
-  <ellipse cx="110" cy="85" rx="8" ry="6" fill="#222"/>
-
-  <!-- Smile -->
-  <path d="M95 95 Q110 105 125 95" stroke="#222" stroke-width="3" fill="none"/>
+  <ellipse cx="100" cy="88" rx="8" ry="6" fill="#4A3428"/>
+  <ellipse cx="98" cy="86" rx="2" ry="2" fill="#FFFFFF" opacity="0.5"/>
+  
+  <!-- Mouth -->
+  <path d="M 100 90 Q 95 95 90 92" stroke="#4A3428" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M 100 90 Q 105 95 110 92" stroke="#4A3428" stroke-width="2" fill="none" stroke-linecap="round"/>
+  
+  <!-- Cheeks (blush) -->
+  <circle cx="70" cy="85" r="8" fill="#FFB6C1" opacity="0.4"/>
+  <circle cx="130" cy="85" r="8" fill="#FFB6C1" opacity="0.4"/>
+  
+  <!-- Body -->
+  <ellipse cx="100" cy="140" rx="45" ry="50" fill="#A0826D"/>
+  
+  <!-- Belly -->
+  <ellipse cx="100" cy="145" rx="32" ry="38" fill="#D4A574"/>
+  
+  <!-- Left Arm -->
+  <ellipse cx="60" cy="125" rx="18" ry="35" fill="#A0826D" transform="rotate(-25 60 125)"/>
+  <ellipse cx="58" cy="125" rx="12" ry="25" fill="#D4A574" transform="rotate(-25 58 125)"/>
+  
+  <!-- Right Arm -->
+  <ellipse cx="140" cy="125" rx="18" ry="35" fill="#A0826D" transform="rotate(25 140 125)"/>
+  <ellipse cx="142" cy="125" rx="12" ry="25" fill="#D4A574" transform="rotate(25 142 125)"/>
+  
+  <!-- Left Leg -->
+  <ellipse cx="80" cy="175" rx="20" ry="30" fill="#A0826D"/>
+  <ellipse cx="80" cy="195" rx="18" ry="12" fill="#8B6F47"/>
+  <ellipse cx="80" cy="195" rx="12" ry="8" fill="#D4A574"/>
+  
+  <!-- Right Leg -->
+  <ellipse cx="120" cy="175" rx="20" ry="30" fill="#A0826D"/>
+  <ellipse cx="120" cy="195" rx="18" ry="12" fill="#8B6F47"/>
+  <ellipse cx="120" cy="195" rx="12" ry="8" fill="#D4A574"/>
+  
+  <!-- Heart on belly -->
+  <path d="M 100 140 C 100 135, 95 130, 90 130 C 85 130, 82 133, 82 137 C 82 143, 100 155, 100 155 C 100 155, 118 143, 118 137 C 118 133, 115 130, 110 130 C 105 130, 100 135, 100 140 Z" fill="#FF69B4" opacity="0.6"/>
+  
+  <!-- Stitching details on belly -->
+  <circle cx="92" cy="155" r="1.5" fill="#8B6F47" opacity="0.3"/>
+  <circle cx="100" cy="160" r="1.5" fill="#8B6F47" opacity="0.3"/>
+  <circle cx="108" cy="155" r="1.5" fill="#8B6F47" opacity="0.3"/>
 </svg>

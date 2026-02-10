@@ -16,6 +16,15 @@ const messages = {
   flower: "Soft, warm, and always yours."
 };
 
+function setMode(mode) {
+  document.body.className = mode;
+
+  if (mode === "fire") aura.style.background = "#ff4500";
+  if (mode === "water") aura.style.background = "#3fbac2";
+  if (mode === "air") aura.style.background = "#ffffff";
+}
+
+
 document.querySelectorAll(".choices button").forEach(btn => {
   btn.addEventListener("click", () => {
     currentStyle = btn.dataset.style;
